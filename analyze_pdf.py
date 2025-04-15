@@ -111,3 +111,4 @@ for result in analysis_results:
         print("Найден сертификат качества!")
         print("Данные сертификата:", result['certificate_data'])
     print(f"Текст (первые 100 символов): {result['text'][:100]}...")
+
