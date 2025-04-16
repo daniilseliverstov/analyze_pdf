@@ -29,7 +29,7 @@ def is_scan(page):
 
 
 def process_scan_with_mistral(image_bytes):
-    api_key = "HolLl3QLtJscvjJDrCPo96wvHifYrfwK"
+    api_key = "LdWOlfusKcJSf0JIJM7y46Q8QNXJFAj5"
     url = "https://api.mistral.ai/v1/ocr"
 
     headers = {
@@ -88,16 +88,16 @@ def process_pdf(file_path):
     return results
 
 
-def save_results_to_json(results, output_file=None):
-    if not output_file:
-        source = results["metadata"]["source_file"].split("/")[-1].split(".")[0]
-        date = results["metadata"]["processing_date"].split()[0]
-        output_file = f"pdf_analysis_{source}_{date}.json"
+#def save_results_to_json(results, output_file=None):
+    #if not output_file:
+        #source = results["metadata"]["source_file"].split("/")[-1].split(".")[0]
+        #date = results["metadata"]["processing_date"].split()[0]
+        #output_file = f"pdf_analysis_{source}_{date}.json"
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
+    #with open(output_file, "w", encoding="utf-8") as f:
+        #json.dump(results, f, ensure_ascii=False, indent=2)
 
-    return output_file
+    #return output_file
 
 
 pdf_path = "exa.pdf"
